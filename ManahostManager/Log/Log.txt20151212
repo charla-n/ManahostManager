@@ -1,0 +1,55 @@
+*INFO       2015-12-12 21:12:24,679        InfoLogger                Application Started 
+*INFO       2015-12-12 21:12:25,087        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:12:25,258        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:12:27,839        InfoLogger                Application Started 
+*INFO       2015-12-12 21:12:27,857        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:12:27,858        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:12:29,075        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:12:29,077        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:12:29,085        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:12:29,085        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:12:29,189        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:12:29,190        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:12:29,192        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:12:29,192        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:13:35,786        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:13:35,796        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:20:10,006        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:20:10,307        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:20:10,334        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:20:10,334        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:20:15,016        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:20:38,848        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:20:43,521        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:20:43,522        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:20:43,524        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:20:43,524        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:20:49,011        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:20:49,013        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:36:44,423        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:36:44,455        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:36:44,455        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:36:44,455        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:36:44,502        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:36:44,502        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:36:44,502        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:36:44,502        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:38:52,514        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:38:52,546        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:38:52,551        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:38:52,551        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:47:16,522        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:47:50,753        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:47:50,763        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:47:50,766        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:47:50,767        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:47:50,830        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:47:50,832        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:47:50,840        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:47:50,841        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:47:50,868        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:47:50,870        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:47:50,872        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:47:50,872        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-12 21:47:57,119        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 
+*INFO       2015-12-12 21:48:01,086        InfoLogger                EmailService is configuring with DC01.manahost.fr:25 

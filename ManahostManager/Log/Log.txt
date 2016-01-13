@@ -1,0 +1,8 @@
+*INFO       2015-12-27 10:57:44,526        InfoLogger                Application Started 
+*INFO       2015-12-27 10:57:45,058        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-27 10:57:48,291        InfoLogger                Application Started 
+*INFO       2015-12-27 10:57:48,330        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-27 10:57:49,494        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-27 10:57:49,504        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-27 10:57:49,526        InfoLogger                Throttling --- Client IP is ::1 
+*INFO       2015-12-27 10:57:49,534        InfoLogger                Throttling --- Client IP is ::1 

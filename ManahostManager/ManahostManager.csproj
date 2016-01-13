@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManahostManager</RootNamespace>
+    <AssemblyName>ManahostManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\ManahostManager.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\ManahostManager.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.0.4\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExpressiveAnnotations, Version=2.3.1.0, Culture=neutral, PublicKeyToken=d3e372f3c1e83cec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExpressiveAnnotations.dll.2.3.1\lib\net45\ExpressiveAnnotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExpressMapper, Version=1.0.3.0, Culture=neutral, PublicKeyToken=ac363faa09311ba0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expressmapper.1.0.3\lib\net45\ExpressMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jil, Version=2.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jil.2.10.0\lib\net45\Jil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Log4Net.Async, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Log4Net.Async.2.0.0.0\lib\net40\Log4Net.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mapster, Version=1.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mapster.1.14.0.0\lib\net45\Mapster.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin, Version=1.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.2.2\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.0\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MsgPack, Version=0.5.0.0, Culture=neutral, PublicKeyToken=a2625990d5dc0167, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MsgPack.Cli.0.5.11\lib\net45\MsgPack.dll</HintPath>
+    </Reference>
+    <Reference Include="MVCControlsToolkit.Owin.Globalization, Version=1.5.0.0, Culture=neutral, PublicKeyToken=35619d5c304f4ec2, processorArchitecture=MSIL">
+      <HintPath>..\packages\MVCControlsToolkit.Owin.Globalization.1.5.0\lib\net45\MVCControlsToolkit.Owin.Globalization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.0.4\lib\net45\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.7.2.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.7.2\lib\net45\RazorEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sigil, Version=4.5.0.0, Culture=neutral, PublicKeyToken=2d06c3494341c8ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sigil.4.5.0\lib\net45\Sigil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.2.1\lib\net40\Swashbuckle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebApiThrottle, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebApiThrottle.1.4.0\lib\net45\WebApiThrottle.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiApplication.AutoMapper.cs" />
+    <Compile Include="App_Start\WebApiApplication.cs" />
+    <Compile Include="App_Start\WebApiApplication.Identity.cs" />
+    <Compile Include="App_Start\WebApiApplication.SignalR.cs" />
+    <Compile Include="App_Start\WebApiApplication.Throttle.cs" />
+    <Compile Include="App_Start\WebApiApplication.Unity.cs" />
+    <Compile Include="App_Start\WebApiApplication.WebApi.cs" />
+    <Compile Include="Controllers\AbstractAPIController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdditionalBookingController.cs" />
+    <Compile Include="Controllers\BedController.cs" />
+    <Compile Include="Controllers\BillController.cs" />
+    <Compile Include="Controllers\GroupBillItemController.cs" />
+    <Compile Include="Controllers\BillItemCategoryController.cs" />
+    <Compile Include="Controllers\BillItemController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
+    <Compile Include="Controllers\BookingStepBookingController.cs" />
+    <Compile Include="Controllers\BookingStepConfigController.cs" />
+    <Compile Include="Controllers\BookingStepController.cs" />
+    <Compile Include="Controllers\DepositController.cs" />
+    <Compile Include="Controllers\FieldGroupController.cs" />
+    <Compile Include="Controllers\GeoController.cs" />
+    <Compile Include="Controllers\IpController.cs" />
+    <Compile Include="Controllers\IssueController.cs" />
+    <Compile Include="Controllers\MealBookingController.cs" />
+    <Compile Include="Controllers\DocumentCategoryController.cs" />
+    <Compile Include="Controllers\DocumentController.cs" />
+    <Compile Include="Controllers\HomeConfigController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KeyGeneratorController.cs" />
+    <Compile Include="Controllers\MailConfigController.cs" />
+    <Compile Include="Controllers\MailController.cs" />
+    <Compile Include="Controllers\MealCategoryController.cs" />
+    <Compile Include="Controllers\MealController.cs" />
+    <Compile Include="Controllers\MealPriceController.cs" />
+    <Compile Include="Controllers\PaymentMethodController.cs" />
+    <Compile Include="Controllers\PaymentTypeController.cs" />
+    <Compile Include="Controllers\PeopleCategoryController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
+    <Compile Include="Controllers\PeopleBookingController.cs" />
+    <Compile Include="Controllers\DinnerBookingController.cs" />
+    <Compile Include="Controllers\PeopleFieldController.cs" />
+    <Compile Include="Controllers\SatisfactionConfigController.cs" />
+    <Compile Include="Controllers\SatisfactionConfigQuestionController.cs" />
+    <Compile Include="Controllers\SupplementRoomBookingController.cs" />
+    <Compile Include="Controllers\PeriodController.cs" />
+    <Compile Include="Controllers\PricePerPersonController.cs" />
+    <Compile Include="Controllers\RoomBookingController.cs" />
+    <Compile Include="Controllers\ProductBookingController.cs" />
+    <Compile Include="Controllers\ProductCategoryController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\RoomCategoryController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\RoomSupplementController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
+    <Compile Include="Controllers\TaxController.cs" />
+    <Compile Include="Hubs\AbstractHub.cs" />
+    <Compile Include="Hubs\SearchHub.cs" />
+    <Compile Include="Hubs\TestHub.cs" />
+    <Compile Include="InterfaceHubs\IAuthentication.cs" />
+    <Compile Include="InterfaceHubs\INotification.cs" />
+    <Compile Include="Logger\Log4NetTraceWriter.cs" />
+    <Compile Include="Logger\ThrottlingLogger.cs" />
+    <Compile Include="Model\DTO\Account\ChangePasswordAccountModel.cs" />
+    <Compile Include="Model\DTO\Account\ConfirmForgetPassword.cs" />
+    <Compile Include="Model\DTO\Account\CreateAccountModel.cs" />
+    <Compile Include="Model\DTO\Account\ExposeAccountModel.cs" />
+    <Compile Include="Model\DTO\Account\ExternalLoginModel.cs" />
+    <Compile Include="Model\DTO\Account\ForgetPasswordModel.cs" />
+    <Compile Include="Model\DTO\Account\PhoneModel.cs" />
+    <Compile Include="Model\DTO\Account\PutAccountModel.cs" />
+    <Compile Include="Model\Factory\Account.Factory.cs" />
+    <Compile Include="Model\HubModel.cs" />
+    <Compile Include="Model\IssueModel.cs" />
+    <Compile Include="Model\MailBookingModel.cs" />
+    <Compile Include="Model\MailModel.cs" />
+    <Compile Include="Provider\BearerAuthorizationServerProvider.cs" />
+    <Compile Include="Provider\BearerRefreshTokenProvider.cs" />
+    <Compile Include="Provider\GoogleCustomAuthenticationProvider.cs" />
+    <Compile Include="Provider\QueryStringBearerTokenProvider.cs" />
+    <Compile Include="Templates\CreateAccount\EmailConfirmation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailConfirmation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\CreateAccount\EmailConfirmation.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailConfirmation.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\BillItemService.cs" />
+    <Compile Include="Services\BillService.cs" />
+    <Compile Include="Services\GroupBillItemService.cs" />
+    <Compile Include="Templates\ForgotPassword\ForgotPassword.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ForgotPassword.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Templates\ForgotPassword\ForgotPassword.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ForgotPassword.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\PaymentMethodService.cs" />
+    <Compile Include="Unity\UnityControllerActivator.cs" />
+    <Compile Include="Utils\Attributs\ManahostAuthorizeAttribute.cs" />
+    <Compile Include="Utils\Attributs\NullValidationAttribut.cs" />
+    <Compile Include="Utils\Captcha\GoogleReCaptchValidator.cs" />
+    <Compile Include="Utils\Captcha\ICaptchaTools.cs" />
+    <Compile Include="Utils\API\Localisation\ByCountry\FranceAutoComplete.cs" />
+    <Compile Include="Utils\API\Localisation\Country\APICountryAutoComplete.cs" />
+    <Compile Include="Utils\API\Localisation\ILocalisationAutoComplete.cs" />
+    <Compile Include="Utils\API\Localisation\Model\GeoCodeJSONModel.cs" />
+    <Compile Include="Services\BillItemCategoryService.cs" />
+    <Compile Include="Utils\ExceptionValidationHandler.cs" />
+    <Compile Include="Utils\ExternalLoginData.cs" />
+    <Compile Include="Utils\ExternalLoginTools\GoogleTokenInfo.cs" />
+    <Compile Include="Utils\ExternalLoginTools\ITokenInfo.cs" />
+    <Compile Include="Utils\ExternalLoginTools\AuthenticationTools.cs" />
+    <Compile Include="Utils\Formatters\MsgPackDatetimeSerializer.cs" />
+    <Compile Include="Utils\HttpServerResolver.cs" />
+    <Compile Include="Utils\IpInfoDB.cs" />
+    <Compile Include="Utils\HttpActionResult\ExtensionsHttpActionResult.cs" />
+    <Compile Include="Utils\MailingUtils\Resources\MailTemplate.fr-FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MailTemplate.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ManahostPatcher\ManahostPatcherModel.cs" />
+    <Compile Include="Model\NewAuthenticationModel.cs" />
+    <Compile Include="Model\AuthenticationModel.cs" />
+    <Compile Include="Model\ClientModel.cs" />
+    <Compile Include="Model\ForgotPasswordModel.cs" />
+    <Compile Include="Model\NotificationModel.cs" />
+    <Compile Include="Services\AbstractService.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Services\AdditionalBookingService.cs" />
+    <Compile Include="Services\BedService.cs" />
+    <Compile Include="Services\BookingService.cs" />
+    <Compile Include="Services\BookingStepBookingService.cs" />
+    <Compile Include="Services\BookingStepConfigService.cs" />
+    <Compile Include="Services\BookingStepService.cs" />
+    <Compile Include="Services\DinnerBookingService.cs" />
+    <Compile Include="Services\DocumentCategoryService.cs" />
+    <Compile Include="Services\DocumentService.cs" />
+    <Compile Include="Services\DepositService.cs" />
+    <Compile Include="Services\FieldGroupService.cs" />
+    <Compile Include="Services\HomeConfigService.cs" />
+    <Compile Include="Services\KeyGeneratorService.cs" />
+    <Compile Include="Services\MailConfigService.cs" />
+    <Compile Include="Services\MailService.cs" />
+    <Compile Include="Services\MealBookingService.cs" />
+    <Compile Include="Services\PaymentTypeService.cs" />
+    <Compile Include="Services\MealCategoryService.cs" />
+    <Compile Include="Services\MealPriceService.cs" />
+    <Compile Include="Services\MealService.cs" />
+    <Compile Include="Services\PeopleBookingService.cs" />
+    <Compile Include="Services\PeopleCategoryService.cs" />
+    <Compile Include="Services\PeopleFieldService.cs" />
+    <Compile Include="Services\PeopleService.cs" />
+    <Compile Include="Services\HomeService.cs" />
+    <Compile Include="Services\PeriodService.cs" />
+    <Compile Include="Services\PricePerPersonService.cs" />
+    <Compile Include="Services\ProductBookingService.cs" />
+    <Compile Include="Services\ProductCategoryService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\RoomBookingService.cs" />
+    <Compile Include="Services\RoomCategoryService.cs" />
+    <Compile Include="Services\RoomService.cs" />
+    <Compile Include="Services\RoomSupplementService.cs" />
+    <Compile Include="Services\SatisfactionConfigQuestionService.cs" />
+    <Compile Include="Services\SatisfactionConfigService.cs" />
+    <Compile Include="Services\SearchService.cs" />
+    <Compile Include="Services\SupplementRoomBookingService.cs" />
+    <Compile Include="Services\SupplierService.cs" />
+    <Compile Include="Services\TaxService.cs" />
+    <Compile Include="Unity\UnityHubActivator.cs" />
+    <Compile Include="Utils\AdvancedSearch.cs" />
+    <Compile Include="Utils\ExceptionManahostHandler.cs" />
+    <Compile Include="Utils\ExceptionManahostLogger.cs" />
+    <Compile Include="Utils\IssueTools\IReport.cs" />
+    <Compile Include="Utils\IssueTools\JiraReport.cs" />
+    <Compile Include="Utils\Formatters\JilFormatter.cs" />
+    <Compile Include="Utils\ManahostPatcher\PatchObjectUtils.cs" />
+    <Compile Include="Utils\ManahostValidationException.cs" />
+    <Compile Include="Utils\ManahostValidationExceptionHubPipeline.cs" />
+    <Compile Include="Utils\Mapper\ManahostMapster.cs" />
+    <Compile Include="Utils\Mapper\ManahostExpressMapper.cs" />
+    <Compile Include="Utils\Mapper\IMapper.cs" />
+    <Compile Include="Utils\BuildStringContent.cs" />
+    <Compile Include="Utils\ComputePrice.cs" />
+    <Compile Include="Utils\Middlewares\CustomThrottlingMiddleware.cs" />
+    <Compile Include="Utils\DocumentUtils.cs" />
+    <Compile Include="Utils\MailingUtils\Mailling.cs" />
+    <Compile Include="Utils\MailingUtils\MailTemplate.cs" />
+    <Compile Include="Utils\MailingUtils\MailUtils.cs" />
+    <Compile Include="Utils\MailingUtils\Resources\MailTemplate.Designer.cs">
+      <DependentUpon>MailTemplate.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Middlewares\GlobalizationAuthenticateMiddleware.cs" />
+    <Compile Include="Utils\Middlewares\GZipMiddleware.cs" />
+    <Compile Include="Utils\Formatters\MsgPackFormatter.cs" />
+    <Compile Include="Utils\NullCheckValidation.cs" />
+    <Compile Include="Unity\UnityResolver.cs" />
+    <Compile Include="Utils\Results\ChallengeResult.cs" />
+    <Compile Include="Validation\BookingStepBookingValidation.cs" />
+    <Compile Include="Validation\BookingStepValidation.cs" />
+    <Compile Include="Validation\BookingValidation.cs" />
+    <Compile Include="Validation\DefaultHomeIdValidation.cs" />
+    <Compile Include="Validation\DocumentValidation.cs" />
+    <Compile Include="Validation\HomeConfigValidation.cs" />
+    <Compile Include="Validation\KeyGeneratorValidation.cs" />
+    <Compile Include="Validation\AbstractValidation.cs" />
+    <Compile Include="Validation\MailValidation.cs" />
+    <Compile Include="Validation\PeopleBookingValidation.cs" />
+    <Compile Include="Validation\PeopleFieldValidation.cs" />
+    <Compile Include="Validation\PeriodValidation.cs" />
+    <Compile Include="Validation\PricePerPersonValidation.cs" />
+    <Compile Include="Validation\ProductBookingValidation.cs" />
+    <Compile Include="Validation\RoomBookingValidation.cs" />
+    <Compile Include="Validation\TimeZoneValidation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Manahost Dev Deploy.pubxml" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Templates\CreateAccount\EmailConfirmation.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Templates\CreateAccount\EmailConfirmation.fr-FR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailConfirmation.fr-FR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Templates\ForgotPassword\ForgotPassword.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="UserConnectionString.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Developpment.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Production.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\CreateAccount\EmailConfirmation.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmailConfirmation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\ForgotPassword\ForgotPassword.fr-FR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ForgotPassword.fr-FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\ForgotPassword\ForgotPassword.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ForgotPassword.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\MailingUtils\Resources\MailTemplate.fr-FR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MailTemplate.fr-FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\MailingUtils\Resources\MailTemplate.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MailTemplate.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MediaFormatter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManahostManager.Domain\ManahostManager.Domain.csproj">
+      <Project>{3c85acb9-2d41-4829-ae80-e19d20a6f109}</Project>
+      <Name>ManahostManager.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManahostManager.Utils\ManahostManager.Utils.csproj">
+      <Project>{f33526e4-e53d-47d9-a8e4-f82f37531f77}</Project>
+      <Name>ManahostManager.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <DeployIisAppPath>APIManagerProd</DeployIisAppPath>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;PROD</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\ManahostManager.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Developpment|AnyCPU'">
+    <DeployIisAppPath>APIManagerDev</DeployIisAppPath>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\ManahostManager.XML</DocumentationFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4144</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4099/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

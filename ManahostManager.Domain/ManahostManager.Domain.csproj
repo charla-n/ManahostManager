@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C85ACB9-2D41-4829-AE80-E19D20A6F109}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManahostManager.Domain</RootNamespace>
+    <AssemblyName>ManahostManager.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Developpment|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Developpment\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.0.4\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExpressiveAnnotations, Version=2.3.1.0, Culture=neutral, PublicKeyToken=d3e372f3c1e83cec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExpressiveAnnotations.dll.2.3.1\lib\net45\ExpressiveAnnotations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jil, Version=2.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jil.2.10.0\lib\net45\Jil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Log4Net.Async, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Log4Net.Async.2.0.0.0\lib\net40\Log4Net.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="MsgPack">
+      <HintPath>..\packages\MsgPack.Cli.0.5.11\lib\net45\MsgPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.0.4\lib\net45\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sigil, Version=4.5.0.0, Culture=neutral, PublicKeyToken=2d06c3494341c8ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sigil.4.5.0\lib\net45\Sigil.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.4\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\ManahostEntityCaching.cs" />
+    <Compile Include="DAL\ManahostManagerDAL.cs" />
+    <Compile Include="DAL\ManahostManagerInitializerTest.cs" />
+    <Compile Include="DAL\ManahostManagerInitializer.cs" />
+    <Compile Include="DTOs\AdditionalBookingDTO.cs" />
+    <Compile Include="DTOs\BedDTO.cs" />
+    <Compile Include="DTOs\BillDTO.cs" />
+    <Compile Include="DTOs\BillItemCategoryDTO.cs" />
+    <Compile Include="DTOs\BillItemDTO.cs" />
+    <Compile Include="DTOs\BookingDocumentDTO.cs" />
+    <Compile Include="DTOs\BookingDTO.cs" />
+    <Compile Include="DTOs\BookingStepBookingDTO.cs" />
+    <Compile Include="DTOs\BookingStepConfigDTO.cs" />
+    <Compile Include="DTOs\BookingStepDTO.cs" />
+    <Compile Include="DTOs\ClientDTO.cs" />
+    <Compile Include="DTOs\DepositDTO.cs" />
+    <Compile Include="DTOs\DinnerBookingDTO.cs" />
+    <Compile Include="DTOs\DocumentCategoryDTO.cs" />
+    <Compile Include="DTOs\DocumentDTO.cs" />
+    <Compile Include="DTOs\DocumentLogDTO.cs" />
+    <Compile Include="DTOs\FieldGroupDTO.cs" />
+    <Compile Include="DTOs\GroupBillItemDTO.cs" />
+    <Compile Include="DTOs\HomeConfigDTO.cs" />
+    <Compile Include="DTOs\HomeDTO.cs" />
+    <Compile Include="DTOs\IDTO.cs" />
+    <Compile Include="DTOs\KeyGeneratorDTO.cs" />
+    <Compile Include="DTOs\MailConfigDTO.cs" />
+    <Compile Include="DTOs\MailLogDTO.cs" />
+    <Compile Include="DTOs\MealBookingDTO.cs" />
+    <Compile Include="DTOs\MealCategoryDTO.cs" />
+    <Compile Include="DTOs\MealDTO.cs" />
+    <Compile Include="DTOs\MealPriceDTO.cs" />
+    <Compile Include="DTOs\PaymentMethodDTO.cs" />
+    <Compile Include="DTOs\PaymentTypeDTO.cs" />
+    <Compile Include="DTOs\PeopleBookingDTO.cs" />
+    <Compile Include="DTOs\PeopleCategoryDTO.cs" />
+    <Compile Include="DTOs\PeopleDTO.cs" />
+    <Compile Include="DTOs\PeopleFieldDTO.cs" />
+    <Compile Include="DTOs\PeriodDTO.cs" />
+    <Compile Include="DTOs\PhoneNumberDTO.cs" />
+    <Compile Include="DTOs\PricePerPersonDTO.cs" />
+    <Compile Include="DTOs\ProductBookingDTO.cs" />
+    <Compile Include="DTOs\ProductCategoryDTO.cs" />
+    <Compile Include="DTOs\ProductDTO.cs" />
+    <Compile Include="DTOs\ResourceConfigDTO.cs" />
+    <Compile Include="DTOs\RoomBookingDTO.cs" />
+    <Compile Include="DTOs\RoomCategoryDTO.cs" />
+    <Compile Include="DTOs\RoomDTO.cs" />
+    <Compile Include="DTOs\RoomSupplementDTO.cs" />
+    <Compile Include="DTOs\SatisfactionClientAnswerDTO.cs" />
+    <Compile Include="DTOs\SatisfactionClientDTO.cs" />
+    <Compile Include="DTOs\SatisfactionConfigDTO.cs" />
+    <Compile Include="DTOs\SatisfactionConfigQuestionDTO.cs" />
+    <Compile Include="DTOs\StatisticsDTO.cs" />
+    <Compile Include="DTOs\SupplementRoomBookingDTO.cs" />
+    <Compile Include="DTOs\SupplierDTO.cs" />
+    <Compile Include="DTOs\TaxDTO.cs" />
+    <Compile Include="Entity\AdditionalBooking.cs" />
+    <Compile Include="Entity\Bed.cs" />
+    <Compile Include="Entity\Bill.cs" />
+    <Compile Include="Entity\BillItem.cs" />
+    <Compile Include="Entity\BillItemCategory.cs" />
+    <Compile Include="Entity\Booking.cs" />
+    <Compile Include="Entity\BookingDocument.cs" />
+    <Compile Include="Entity\BookingStep.cs" />
+    <Compile Include="Entity\BookingStepBooking.cs" />
+    <Compile Include="Entity\BookingStepConfig.cs" />
+    <Compile Include="Entity\Client.cs" />
+    <Compile Include="Entity\Deposit.cs" />
+    <Compile Include="Entity\DinnerBooking.cs" />
+    <Compile Include="Entity\Document.cs" />
+    <Compile Include="Entity\DocumentCategory.cs" />
+    <Compile Include="Entity\DocumentLog.cs" />
+    <Compile Include="Entity\EAccountState.cs" />
+    <Compile Include="Entity\EKeyType.cs" />
+    <Compile Include="Entity\GroupBillItem.cs" />
+    <Compile Include="Entity\FieldGroup.cs" />
+    <Compile Include="Entity\IEntity.cs" />
+    <Compile Include="Entity\KeyGenerator.cs" />
+    <Compile Include="Entity\MailConfig.cs" />
+    <Compile Include="Entity\EAnswerType.cs" />
+    <Compile Include="Entity\EEstablishmentType.cs" />
+    <Compile Include="Entity\EValueType.cs" />
+    <Compile Include="Entity\Home.cs" />
+    <Compile Include="Entity\HomeConfig.cs" />
+    <Compile Include="Entity\MailLog.cs" />
+    <Compile Include="Entity\Meal.cs" />
+    <Compile Include="Entity\MealBooking.cs" />
+    <Compile Include="Entity\MealCategory.cs" />
+    <Compile Include="Entity\MealPrice.cs" />
+    <Compile Include="Entity\Payment.cs" />
+    <Compile Include="Entity\PaymentMethod.cs" />
+    <Compile Include="Entity\PaymentType.cs" />
+    <Compile Include="Entity\People.cs" />
+    <Compile Include="Entity\PeopleBooking.cs" />
+    <Compile Include="Entity\PeopleCategory.cs" />
+    <Compile Include="Entity\PeopleField.cs" />
+    <Compile Include="Entity\Period.cs" />
+    <Compile Include="Entity\PhoneNumber.cs" />
+    <Compile Include="Entity\PriceManahost.cs" />
+    <Compile Include="Entity\PricePerPerson.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\ProductBooking.cs" />
+    <Compile Include="Entity\ProductCategory.cs" />
+    <Compile Include="Entity\RefreshToken.cs" />
+    <Compile Include="Entity\ResourceConfig.cs" />
+    <Compile Include="Entity\Room.cs" />
+    <Compile Include="Entity\RoomBooking.cs" />
+    <Compile Include="Entity\RoomCategory.cs" />
+    <Compile Include="Entity\RoomSupplement.cs" />
+    <Compile Include="Entity\SatisfactionClient.cs" />
+    <Compile Include="Entity\SatisfactionClientAnswer.cs" />
+    <Compile Include="Entity\SatisfactionConfig.cs" />
+    <Compile Include="Entity\SatisfactionConfigQuestion.cs" />
+    <Compile Include="Entity\Service.cs" />
+    <Compile Include="Entity\Statistics.cs" />
+    <Compile Include="Entity\Subscription.cs" />
+    <Compile Include="Entity\SupplementRoomBooking.cs" />
+    <Compile Include="Entity\Supplier.cs" />
+    <Compile Include="Entity\Tax.cs" />
+    <Compile Include="Entity\Test.cs" />
+    <Compile Include="Extension\MaxBy.cs" />
+    <Compile Include="Extension\MinBy.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Migrations\201510051754045_FirstMigrations.cs" />
+    <Compile Include="Migrations\201510051754045_FirstMigrations.Designer.cs">
+      <DependentUpon>201510051754045_FirstMigrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510150929563_ProductAddIsService.cs" />
+    <Compile Include="Migrations\201510150929563_ProductAddIsService.Designer.cs">
+      <DependentUpon>201510150929563_ProductAddIsService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AbstractRepository.cs" />
+    <Compile Include="Repository\AdditionalBookingRepository.cs" />
+    <Compile Include="Repository\BillItemCategoryRepository.cs" />
+    <Compile Include="Repository\BillItemRepository.cs" />
+    <Compile Include="Repository\BillRepository.cs" />
+    <Compile Include="Repository\BookingRepository.cs" />
+    <Compile Include="Repository\BookingStepBookingRepository.cs" />
+    <Compile Include="Repository\BookingStepConfigRepository.cs" />
+    <Compile Include="Repository\BookingStepRepository.cs" />
+    <Compile Include="Repository\FieldGroupRepository.cs" />
+    <Compile Include="Repository\GroupBillItemRepository.cs" />
+    <Compile Include="Repository\PaymentMethodRepository.cs" />
+    <Compile Include="Repository\PeopleFieldRepository.cs" />
+    <Compile Include="Repository\PhoneRepository.cs" />
+    <Compile Include="Repository\RefreshTokenRepository.cs" />
+    <Compile Include="Repository\SatisfactionConfigQuestionRepository.cs" />
+    <Compile Include="Repository\ClientRepository.cs" />
+    <Compile Include="Repository\DepositRepository.cs" />
+    <Compile Include="Repository\DinnerBookingRepository.cs" />
+    <Compile Include="Repository\DocumentCategoryRepository.cs" />
+    <Compile Include="Repository\DocumentLogRepository.cs" />
+    <Compile Include="Repository\DocumentRepository.cs" />
+    <Compile Include="Repository\HomeConfigRepository.cs" />
+    <Compile Include="Repository\HomeRepository.cs" />
+    <Compile Include="Repository\KeyGeneratorRepository.cs" />
+    <Compile Include="Repository\MailConfigRepository.cs" />
+    <Compile Include="Repository\MealBookingRepository.cs" />
+    <Compile Include="Repository\MealCategoryRepository.cs" />
+    <Compile Include="Repository\MealPriceRepository.cs" />
+    <Compile Include="Repository\MealRepository.cs" />
+    <Compile Include="Repository\MailLogRepository.cs" />
+    <Compile Include="Repository\PaymentTypeRepository.cs" />
+    <Compile Include="Repository\PeopleBookingRepository.cs" />
+    <Compile Include="Repository\PeopleCategoryRepository.cs" />
+    <Compile Include="Repository\PeopleRepository.cs" />
+    <Compile Include="Repository\BedRepository.cs" />
+    <Compile Include="Repository\PeriodRepository.cs" />
+    <Compile Include="Repository\PricePerPersonRepository.cs" />
+    <Compile Include="Repository\ProductBookingRepository.cs" />
+    <Compile Include="Repository\ProductCategoryRepository.cs" />
+    <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\RoomBookingRepository.cs" />
+    <Compile Include="Repository\RoomCategoryRepository.cs" />
+    <Compile Include="Repository\RoomRepository.cs" />
+    <Compile Include="Repository\RoomSupplementRepository.cs" />
+    <Compile Include="Repository\SatisfactionConfigRepository.cs" />
+    <Compile Include="Repository\SearchRepository.cs" />
+    <Compile Include="Repository\ServiceRepository.cs" />
+    <Compile Include="Repository\SupplementRoomBookingRepository.cs" />
+    <Compile Include="Repository\SupplierRepository.cs" />
+    <Compile Include="Repository\TaxRepository.cs" />
+    <Compile Include="Repository\TestRepository.cs" />
+    <Compile Include="Tools\BcryptPasswordHasher.cs" />
+    <Compile Include="Tools\IdentityTools.cs" />
+    <Compile Include="Tools\ManahostInitData.cs" />
+    <Compile Include="Tools\PeriodUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManahostManager.Utils\ManahostManager.Utils.csproj">
+      <Project>{f33526e4-e53d-47d9-a8e4-f82f37531f77}</Project>
+      <Name>ManahostManager.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="attach.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201510051754045_FirstMigrations.resx">
+      <DependentUpon>201510051754045_FirstMigrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510150929563_ProductAddIsService.resx">
+      <DependentUpon>201510150929563_ProductAddIsService.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

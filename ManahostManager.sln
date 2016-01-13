@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManahostManager", "ManahostManager\ManahostManager.csproj", "{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManahostManager.Tests", "ManahostManager.Tests\ManahostManager.Tests.csproj", "{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManahostManager.Domain", "ManahostManager.Domain\ManahostManager.Domain.csproj", "{3C85ACB9-2D41-4829-AE80-E19D20A6F109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManahostManager.Utils", "ManahostManager.Utils\ManahostManager.Utils.csproj", "{F33526E4-E53D-47D9-A8E4-F82F37531F77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8785DE31-CA1D-43CC-814D-C53C443D76F3}"
+	ProjectSection(SolutionItems) = preProject
+		CodeCoverage.config = CodeCoverage.config
+		CodeCoverage.runsettings = CodeCoverage.runsettings
+		sonar-project.properties = sonar-project.properties
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Developpment|Any CPU = Developpment|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Developpment|Any CPU.ActiveCfg = Developpment|Any CPU
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Developpment|Any CPU.Build.0 = Developpment|Any CPU
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Production|Any CPU.Build.0 = Production|Any CPU
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC00A8DF-9C78-4917-B33E-E0A0F389DA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Developpment|Any CPU.ActiveCfg = Developpment|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Developpment|Any CPU.Build.0 = Developpment|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Production|Any CPU.Build.0 = Production|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0646F57-CC43-4F79-8816-2FE87CF4DD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Developpment|Any CPU.ActiveCfg = Developpment|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Developpment|Any CPU.Build.0 = Developpment|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Production|Any CPU.Build.0 = Production|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C85ACB9-2D41-4829-AE80-E19D20A6F109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Developpment|Any CPU.ActiveCfg = Developpment|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Developpment|Any CPU.Build.0 = Developpment|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Production|Any CPU.Build.0 = Production|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33526E4-E53D-47D9-A8E4-F82F37531F77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

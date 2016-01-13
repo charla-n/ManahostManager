@@ -1,0 +1,79 @@
+﻿@using System.Threading
+@using ManahostManager.Templates.CreateAccount
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>@EmailConfirmation.ResourceManager.GetString("TITLE", Thread.CurrentThread.CurrentCulture)</title>
+    <style>
+    </style>
+</head>
+
+<body style="text-align:center;">
+    <table style="margin: 0 auto;text-align: left;width:800px;border: 1px solid #cccccc;border-spacing:0;border-collapse:collapse;">
+        <tr>
+            <td style="background-color:#70bbd9;padding:10px 0 10px 0;text-align:center;">
+                <img src="http://imageshack.com/a/img903/5913/UUlvNw.png" />
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:5px 0 10px 0;">
+                <table style="padding:0 10px 0 10px">
+                    <tr>
+                        <td>
+                            <p>
+                                @EmailConfirmation.ResourceManager.GetString("DEAR", Thread.CurrentThread.CurrentCulture) @Model.FirstName @Model.LastName
+                            </p>
+                            @EmailConfirmation.ResourceManager.GetString("EMAIL_SHOW_PART_1", Thread.CurrentThread.CurrentCulture) @Model.Email @EmailConfirmation.ResourceManager.GetString("EMAIL_SHOW_PART_2", Thread.CurrentThread.CurrentCulture)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="text-align:center">
+                                <a href="@Model.Link" style=""><div class="button">@EmailConfirmation.ResourceManager.GetString("BUTTON_TEXT", Thread.CurrentThread.CurrentCulture)</div></a>
+                            </div>
+                            <p style="font-size:12px;text-align:center;">@EmailConfirmation.ResourceManager.GetString("LABEL_BUTTON", Thread.CurrentThread.CurrentCulture)</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top:10px">
+                            @EmailConfirmation.ResourceManager.GetString("LABEL_URL", Thread.CurrentThread.CurrentCulture)
+                            <a href="@Model.Link">@Model.Link</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color:#ee4c50;">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:85%">@EmailConfirmation.ResourceManager.GetString("MANAHOST_CORP", Thread.CurrentThread.CurrentCulture)</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a style="border-radius:10px" href="https://twitter.com/ManahostEIP">
+                                            <img src="https://pbs.twimg.com/profile_images/615680132565504000/EIpgSD2K.png" alt="Twitter" width="38" height="38" style="display: block;" border="0" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a style="border-radius:10px" href="https://www.facebook.com/manahostEIP">
+                                            <img src="http://cometesdamos.cia-info.com/images/195739_360173827457914_173438126_n5b15d.jpg" alt="Facebook" width="38" height="38" style="display: block;" border="0" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
